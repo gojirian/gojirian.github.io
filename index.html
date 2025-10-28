@@ -1,18 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.min.css" rel="stylesheet">
-</head>
-<body>
-
-    <canvas id="rain" style="width:100%; height: 100vh;"></canvas>
-    <div class="container" id="main">
+    <title>Nathanael Hollings - Senior Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        canvas {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
         
+        .glass-effect {
+            background: rgba(34, 34, 34, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 188, 140, 0.3);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 188, 140, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <canvas id="rain"></canvas>
+    
+    <div class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <header class="glass-effect rounded-lg p-8 mb-8">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-green-400 mb-2">Nathanael Hollings</h1>
+                        <p class="text-xl text-gray-300">Senior Full Stack Developer</p>
+                        <p class="text-gray-400 mt-2">Father of 2, Runner & Self-Taught Developer</p>
+                    </div>
+                    <div class="text-left md:text-right space-y-1">
+                        <p class="text-gray-300">📍 Hamilton, New Zealand</p>
+                        <p class="text-gray-300">📧 nathanael.hollings@gmail.com</p>
+                        <p class="text-gray-300">📱 (64) 021 910 968</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- About -->
+            <section class="glass-effect rounded-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-green-400 mb-4">About Me</h2>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    Self-taught developer with a passion for building innovative software solutions. 
+                    Currently serving as Senior Developer, Operations Manager, and Team Lead at Exaba, 
+                    where I oversee development teams and deliver high-quality projects using Laravel, 
+                    Vue.js, and other modern web technologies.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="glass-effect rounded-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-green-400 mb-6">Technical Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">PHP</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Python</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">JavaScript</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">TypeScript</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Laravel</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Vue.js</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Angular</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">React</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Symfony</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">MySQL</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">AWS S3</span>
+                    </div>
+                    <div class="skill-badge glass-effect rounded-lg p-3 text-center border-green-500">
+                        <span class="text-green-300 font-semibold">Ionic</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="glass-effect rounded-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-green-400 mb-6">Professional Experience</h2>
+                
+                <div class="space-y-8">
+                    <!-- Exaba -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Exaba (formerly LuminateOne)</h3>
+                        <p class="text-green-300 mb-2">Senior Developer / Operations Manager / Team Lead</p>
+                        <p class="text-gray-400 mb-3">October 2022 – Present | Auckland, NZ</p>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Lead development team overseeing multiple client projects</li>
+                            <li>Maintain and develop Laravel and Vue.js applications</li>
+                            <li>Manage operations across Symfony and multi-tenant PHP platforms</li>
+                            <li>Mentor and guide junior developers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Flume -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Flume</h3>
+                        <p class="text-green-300 mb-2">Senior Full Stack Developer / Tech Lead</p>
+                        <p class="text-gray-400 mb-3">February 2022 – Present (Contract) | Auckland</p>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Rapidly progressed from Intermediate to Senior to Tech Lead</li>
+                            <li>Delivered large-scale custom application for global organization</li>
+                            <li>Completed project within budget and ahead of schedule</li>
+                        </ul>
+                    </div>
+
+                    <!-- Shift Innovation -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Shift Innovation</h3>
+                        <p class="text-green-300 mb-2">Full Stack Developer</p>
+                        <p class="text-gray-400 mb-3">December 2016 – February 2022 | Hamilton</p>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Built and maintained large-scale applications including job management systems</li>
+                            <li>Established Laravel as primary backend framework for the company</li>
+                            <li>Developed solutions for Master Electricians of NZ</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="glass-effect rounded-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-green-400 mb-6">Key Projects</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass-effect rounded-lg p-6 border border-green-500/30">
+                        <h3 class="text-xl font-bold text-green-300 mb-2">Medview Spark</h3>
+                        <p class="text-gray-400 mb-3">Laravel Vapor, Nuxt, TypeScript</p>
+                        <p class="text-gray-300">UCAT LMS platform for aspiring medical students</p>
+                    </div>
+
+                    <div class="glass-effect rounded-lg p-6 border border-green-500/30">
+                        <h3 class="text-xl font-bold text-green-300 mb-2">2Train</h3>
+                        <p class="text-gray-400 mb-3">Hybrid PHP/Laravel, Vue.js</p>
+                        <p class="text-gray-300">Comprehensive student management system for trade schools</p>
+                    </div>
+
+                    <div class="glass-effect rounded-lg p-6 border border-green-500/30">
+                        <h3 class="text-xl font-bold text-green-300 mb-2">MEHUB</h3>
+                        <p class="text-gray-400 mb-3">Laravel, Angular, Ionic</p>
+                        <p class="text-gray-300">Job management app with web and mobile platforms for Master Electricians NZ</p>
+                    </div>
+
+                    <div class="glass-effect rounded-lg p-6 border border-green-500/30">
+                        <h3 class="text-xl font-bold text-green-300 mb-2">CCP (Chorus Certificate Portal)</h3>
+                        <p class="text-gray-400 mb-3">Laravel Stack</p>
+                        <p class="text-gray-300">Certification and LMS system for technician qualifications</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="glass-effect rounded-lg p-6 text-center">
+                <p class="text-gray-400">
+                    © 2025 Nathanael Hollings. Built with passion and coffee ☕
+                </p>
+            </footer>
+        </div>
     </div>
 
-  
-  <script src="rain.js"></script>
+    <script src="rain.js"></script>
 </body>
 </html>
